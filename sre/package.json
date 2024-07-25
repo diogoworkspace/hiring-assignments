@@ -1,0 +1,14 @@
+{
+  "name": "dummy-app",
+  "version": "1.0.0",
+  "description": "dummy app with health check",
+  "main": "index.js",
+  "scripts": {
+    "x": "npm x"
+  },
+  "author": "Diogo Nogueira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
