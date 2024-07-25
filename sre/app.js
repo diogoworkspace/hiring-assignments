@@ -1,8 +1,14 @@
-const express = require('express');
+import { logger } from './utils/logger.js';
+import express from 'express';
+import metricsMiddleware from './utils/metrics.js'
 
 const app = express();
 
+app.use(metricsMiddleware)
+
 app.get('/health', (req, res) => {
+    logger.info('The application is healthy');
+
     res.status(200).send('Healthy service');  
 });
 
