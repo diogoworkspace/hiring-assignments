@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "dummy app with health check",
   "main": "app.js",
-  "scripts": {
-    "x": "npm x"
-  },
   "author": "Diogo Nogueira",
   "license": "ISC",
   "dependencies": {

@@ -1,6 +1,6 @@
 import { logger } from './utils/logger.js';
 import express from 'express';
-import metricsMiddleware from './utils/metrics.js'
+import { metricsMiddleware } from './utils/metrics.js'
 
 const app = express();
 

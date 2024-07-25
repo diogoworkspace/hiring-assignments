@@ -1,3 +1,8 @@
+# IDE configurations
 .vscode
 
+# Service generated files
 node_modules
+
+# Service logs
+service-log.log
