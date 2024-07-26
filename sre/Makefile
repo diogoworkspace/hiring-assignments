@@ -11,4 +11,4 @@ run-docker:
 	docker run -it -p 8080:8080 dummy-app
 
 deploy-kubernetes:
-	kubectl apply -f kubernetes/
+	helm install dummy-app kubernetes/dummy-app

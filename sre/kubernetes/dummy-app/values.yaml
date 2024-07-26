@@ -1,0 +1,14 @@
+name: dummy-app
+
+replicas: 1
+
+namespace: dummy-app
+
+nodePort: 30000
+servicePort: 8080
+
+cpuRequests: 500m
+cpuLimits: 1
+
+memoryRequests: 500M
+memoryLimits: 1Gi

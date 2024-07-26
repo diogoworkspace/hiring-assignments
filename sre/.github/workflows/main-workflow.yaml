@@ -25,4 +25,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Apply service
-        run: kubectl apply -f kubernetes/
+        run: helm install dummy-app kubernetes/dummy-app

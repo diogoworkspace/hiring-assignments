@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  type: LoadBalancer
+  ports:
+    - nodePort: {{ .Values.nodePort }}
+      port: {{ .Values.servicePort }}
+      protocol: TCP
+      targetPort: {{ .Values.servicePort }}
+  selector:
+    name: {{ .Values.name }}
