@@ -1,0 +1,28 @@
+name: "Main workflow"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-namespaces:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Terraform init
+        run: terraform init
+      - name: Create namespaces
+        run: terraform apply -y kubernetes/terraform/
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build image
+        run: docker build -t diogofilipedocker/dummy-app .
+  publish-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push image
+        run: docker push diogofilipedocker/dummy-app
+  deploy-service:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply service
+        run: kubectl apply -f kubernetes/
