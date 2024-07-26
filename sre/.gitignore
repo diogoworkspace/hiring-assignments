@@ -8,4 +8,5 @@ node_modules
 service-log.log
 
 # Terraform generated files
-*/.terraform*/**
+**/.terraform/*
+**/.terraform.lock.hcl
