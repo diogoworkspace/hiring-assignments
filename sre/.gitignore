@@ -6,3 +6,6 @@ node_modules
 
 # Service logs
 service-log.log
+
+# Terraform generated files
+*/.terraform*/**
